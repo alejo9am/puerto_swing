@@ -1,3 +1,5 @@
+//Alejo Arenas Moreira
+
 package PaqG10_B;
 
 import javax.swing.*;
@@ -27,6 +29,7 @@ public class GestionContenedores extends JFrame{
     private JLabel logo_empresa;
     private JPanel Operaciones;
     private JTextArea estadoHub;
+    private JButton pesoButton;
 
     public GestionContenedores(Puerto almacen){
         setContentPane(panelPrincipal);
@@ -121,6 +124,12 @@ public class GestionContenedores extends JFrame{
                 String Pais = (String) pais_cuantos.getSelectedItem();
                 suma = almacen.cantCont(Pais);
                 mostrar_nPaises.setText(String.valueOf(suma));
+            }
+        });
+        pesoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                VentanaPeso pesoHub = new VentanaPeso(almacen);
             }
         });
     }

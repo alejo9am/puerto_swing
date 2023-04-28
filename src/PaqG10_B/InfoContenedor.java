@@ -1,3 +1,5 @@
+//Alejo Arenas Moreira
+
 package PaqG10_B;
 
 import javax.swing.*;

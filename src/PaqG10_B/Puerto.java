@@ -1,3 +1,5 @@
+//Alejo Arenas Moreira
+
 package PaqG10_B;
 
 public class Puerto {
@@ -19,10 +21,11 @@ public class Puerto {
         StringBuilder s = new StringBuilder();
         for(int i=0;i<F;i++){
             for(int j=0;j<C;j++){
+                //Las celdas ocupadas se escriben de forma "id-peso   "
                 if (this.almacen[i][j].getId() == -1){
                     s.append("0       ");
                 }
-                else s.append("X       ");
+                else s.append(this.almacen[i][j].getId()).append("-").append(this.almacen[i][j].getPeso()).append("   ");
             }
             s.append("\n");
         }
